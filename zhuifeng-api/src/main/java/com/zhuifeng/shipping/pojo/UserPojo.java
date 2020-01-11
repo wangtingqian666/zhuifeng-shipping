@@ -30,7 +30,7 @@ public class UserPojo implements Serializable {
     public String getUname() {
         return uname;
     }
-
+     //写点什么
     public void setUname(String uname) {
         this.uname = uname;
     }
