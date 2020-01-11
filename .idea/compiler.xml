@@ -12,12 +12,14 @@
         <module name="zhuifeng-status" />
         <module name="zhuifeng-itinerary" />
         <module name="zhuifeng-cart" />
+        <module name="zhuifeng-controller" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="zhuifeng-cart" options="-parameters" />
+      <module name="zhuifeng-controller" options="-parameters" />
       <module name="zhuifeng-itinerary" options="-parameters" />
       <module name="zhuifeng-message" options="-parameters" />
       <module name="zhuifeng-status" options="-parameters" />
