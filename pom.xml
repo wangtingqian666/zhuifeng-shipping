@@ -12,6 +12,11 @@
         <module>zhuifeng-dependencies</module>
         <module>zhuifeng-api</module>
         <module>zhuifeng-customers</module>
+        <module>zhuifeng-itinerary</module>
+        <module>zhuifeng-controller</module>
+        <module>zhuifeng-cart</module>
+        <module>zhuifeng-message</module>
+        <module>zhuifeng-status</module>
     </modules>
 
 </project>
