@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/zhuifeng-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhuifeng-cart" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhuifeng-controller" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhuifeng-customers" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhuifeng-dependencies" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhuifeng-itinerary" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhuifeng-message" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhuifeng-status" charset="UTF-8" />
