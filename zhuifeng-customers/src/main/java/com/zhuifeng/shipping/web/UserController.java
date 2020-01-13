@@ -31,6 +31,8 @@ public class UserController {
         }
         session.setAttribute("user",user);
         return "index";
+
     }
+
 
 }

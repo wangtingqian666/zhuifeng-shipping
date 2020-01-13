@@ -9,8 +9,16 @@ public class UserServiceImpl implements IUserService {
 
     @Autowired
     UserMapper userMapper;
+    //登录
     @Override
     public UserPojo login(UserPojo userPojo) {
         return userMapper.login(userPojo);
     }
+
+    //注册
+
+    public void UserRegister(UserPojo userPojo) {
+        userMapper.UserRegister(userPojo);
+    }
+
 }
