@@ -1,0 +1,13 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /message
+dubbo:
+  #Ïû·ÑÕß
+  application:
+    name: zhuifeng-message
+  registry:
+    address: zookeeper://127.0.0.1:2181
+spring:
+  freemarker:
+    suffix: .ftl

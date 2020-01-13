@@ -79,7 +79,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="left"><span>*</span>内容：</td>
+                    <td class=nnnnnnnnnnnnnnnnnnnnnnnnnnn"left"><span>*</span>内容：</td>
                     <td colspan="3"><textarea class="text text3" name="mbody"></textarea></td>
                 </tr>
                 <tr>
