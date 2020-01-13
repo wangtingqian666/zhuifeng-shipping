@@ -16,6 +16,13 @@ public class UserController {
     @Autowired
     IUserService userService;
 
+    /***
+     * 登陆
+     * @param userPojo
+     * @param session
+     * @param model
+     * @return
+     */
     private  String  login(UserPojo userPojo, HttpSession session, Model model){
         UserPojo user = userService.login(userPojo);
         if (null == user){
