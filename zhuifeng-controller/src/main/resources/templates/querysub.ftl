@@ -14,7 +14,7 @@
     <script type="text/javascript" src="scripts/html5shiv.v3.72.min.js"></script>
     <![endif]-->
     <script type="text/javascript">
-        var navID = "4";
+        var navID = "3";
     </script>
 </head>
 
@@ -54,58 +54,91 @@
     $("#nav" + navID).addClass("onnav");
 </script>
 <!--top End-->
-<section class="Contain">
-    <section class="Solution">
-        <div class="title">
-            <p>锦江航运依靠完善的物流体系，为客户提供国际集装箱运输、国际货运代理、船舶代理、集装箱堆场、保税仓储等全方位的物流综合服务，根据客户特殊要求独身定做专业物流解决方案。欢迎您随时垂询获取属于您的专享物流服务。</p>
-        </div>
-        <form action="savemessage" method="post">
-            <div class="message">
-            <div class="tit1">我要留言</div>
-            <div class="tit2"><span>*</span>号内容为必填</div>
-            <table cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                    <td class="left"><span>*</span>留言人：</td>
-                    <td><input type="text" class="text" name="mname" /></td>
-                    <td class="left"><span></span>标题：</td>
-                    <td><input type="text" class="text text2" name="mtitle" /><em>25个字以内</em></td>
-                </tr>
-                <tr>
-                    <td class="left"><span>*</span>问题类型：</td>
-                    <td>
-                        <input type="radio" value="1" class="radio" name="mtype" checked /><label>咨询 </label>
-                        <input type="radio" value="2" class="radio" name="mtype" /><label>建议 </label>
-                        <input type="radio" value="3" class="radio" name="mtype" /><label>投诉 </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class=nnnnnnnnnnnnnnnnnnnnnnnnnnn"left"><span>*</span>内容：</td>
-                    <td colspan="3"><textarea class="text text3" name="mbody"></textarea></td>
-                </tr>
-                <tr>
-                    <td class="left"><span>*</span>电话号码：</td>
-                    <td colspan="3"><input type="text" class="text" name="mphone" /><em>请务必填写，我们可能会电话与您联系</em></td>
-                </tr>
-                <tr>
-                    <!--1111111111111111-->
-                    <td class="left"><span></span>电子邮件：</td>
-                    <td><input type="text" class="text" name="memail" /></td>
-                </tr>
-                <tr>
-                    <td colspan="4"><input type="submit" class="btn btn2" value="查 询" /><input type="button" class="btn reset-btn" value="重 置" /></td>
-                </tr>
-            </table>
-        </div>
-        </form>
-    </section>
-</section>
-<script type="text/javascript">
-    $(".table2 tr:odd").addClass("odd");
-</script>
-<!--航线产品-->
+<section class="Contain Contain-column">
+    <aside class="SildeBar">
+        <nav class="MenuList">
+            <span class="list1">信息查询与订阅</span>
+            <ul>
+                <li id="menu1"><a href="货物跟踪.html">货物跟踪</a></li>
+                <li id="menu2"><a href="船期查询.html">船期查询</a></li>
+                <li id="menu3"><a href="船舶动态.html">船舶动态</a></li>
+                <li id="menu4"><a href="多式联运查询.html">多式联运查询</a></li>
+                <li id="menu5"><a href="滞期费查询.html">滞期费查询</a></li>
+                <li id="menu6"><a href="方箱查询.html">方箱查询</a></li>
+                <li id="menu7"><a href="换单信息查询.html">换单信息查询</a></li>
+                <li id="menu8"  class="last"><a href="">消息订阅</a></li>
+            </ul>
+        </nav>
 
+    </aside>
+    <script type="text/javascript">
+        $("#menu1").addClass("on");
+    </script>
+    <div class="Content-column">
+        <div class="Cargo">
+            <div class="select">
+                <div class="num">
+                    <div class="tit">提单号  </div>
+                    <input type="text" class="text" />
+                </div>
+                <div class="num">
+                    <div class="tit">箱号  </div>
+                    <input type="text" class="text" />
+                </div>
+                <div class="clear"></div>
+                <div class="search">
+                    <a href="" class="btn">查 询</a>
+                    <a href="" class="btn reset-btn">重 置</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="result">
+                <div class="tit">查询结果</div>
+                <div class="table">
+                    <table cellpadding="0" cellspacing="0">
+                        <tr class="tr1">
+                            <td class="td1">序号</td>
+                            <td class="td2"> 船名 </td>
+                            <td class="td3">航次</td>
+                            <td class="td4"> 提单号  </td>
+                            <td class="td5">装货港 </td>
+                            <td class="td6"> 卸货港 </td>
+                            <td class="td7">箱号</td>
+                            <td class="td8">箱型</td>
+                            <td class="td9">尺寸</td>
+                            <td class="td10">空重 </td>
+                            <td class="td11">箱动态</td>
+                            <td class="td12">箱动态时间 </td>
+                            <td class="td13"> 港口</td>
+                            <td class="td14">动态发送地</td>
+                            <td class="td15">备注</td>
+                        </tr>
+                        <tr>
+                            <td class="td1"></td>
+                            <td class="td2">  </td>
+                            <td class="td3"></td>
+                            <td class="td4">   </td>
+                            <td class="td5"> </td>
+                            <td class="td6">  </td>
+                            <td class="td7"></td>
+                            <td class="td8"></td>
+                            <td class="td9"></td>
+                            <td class="td10"> </td>
+                            <td class="td11"></td>
+                            <td class="td12"> </td>
+                            <td class="td13"> </td>
+                            <td class="td14"></td>
+                            <td class="td15"></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
 </section>
-<div class="clear"></div>
+
 <!--bottom-->
 <footer>
     <section class="Bottom">

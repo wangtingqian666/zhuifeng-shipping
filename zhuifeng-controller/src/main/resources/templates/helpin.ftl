@@ -14,7 +14,7 @@
     <script type="text/javascript" src="scripts/html5shiv.v3.72.min.js"></script>
     <![endif]-->
     <script type="text/javascript">
-        var navID = "4";
+        var navID = "5";
     </script>
 </head>
 
@@ -54,58 +54,51 @@
     $("#nav" + navID).addClass("onnav");
 </script>
 <!--top End-->
-<section class="Contain">
-    <section class="Solution">
-        <div class="title">
-            <p>锦江航运依靠完善的物流体系，为客户提供国际集装箱运输、国际货运代理、船舶代理、集装箱堆场、保税仓储等全方位的物流综合服务，根据客户特殊要求独身定做专业物流解决方案。欢迎您随时垂询获取属于您的专享物流服务。</p>
-        </div>
-        <form action="savemessage" method="post">
-            <div class="message">
-            <div class="tit1">我要留言</div>
-            <div class="tit2"><span>*</span>号内容为必填</div>
-            <table cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                    <td class="left"><span>*</span>留言人：</td>
-                    <td><input type="text" class="text" name="mname" /></td>
-                    <td class="left"><span></span>标题：</td>
-                    <td><input type="text" class="text text2" name="mtitle" /><em>25个字以内</em></td>
-                </tr>
-                <tr>
-                    <td class="left"><span>*</span>问题类型：</td>
-                    <td>
-                        <input type="radio" value="1" class="radio" name="mtype" checked /><label>咨询 </label>
-                        <input type="radio" value="2" class="radio" name="mtype" /><label>建议 </label>
-                        <input type="radio" value="3" class="radio" name="mtype" /><label>投诉 </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class=nnnnnnnnnnnnnnnnnnnnnnnnnnn"left"><span>*</span>内容：</td>
-                    <td colspan="3"><textarea class="text text3" name="mbody"></textarea></td>
-                </tr>
-                <tr>
-                    <td class="left"><span>*</span>电话号码：</td>
-                    <td colspan="3"><input type="text" class="text" name="mphone" /><em>请务必填写，我们可能会电话与您联系</em></td>
-                </tr>
-                <tr>
-                    <!--1111111111111111-->
-                    <td class="left"><span></span>电子邮件：</td>
-                    <td><input type="text" class="text" name="memail" /></td>
-                </tr>
-                <tr>
-                    <td colspan="4"><input type="submit" class="btn btn2" value="查 询" /><input type="button" class="btn reset-btn" value="重 置" /></td>
-                </tr>
-            </table>
-        </div>
-        </form>
-    </section>
-</section>
-<script type="text/javascript">
-    $(".table2 tr:odd").addClass("odd");
-</script>
-<!--航线产品-->
+<section class="Contain Contain-column">
+    <aside class="SildeBar">
+        <nav class="MenuList">
+            <span class="list3">帮助中心</span>
+            <ul>
+                <li id="menu1"><a href="走进锦江.html">走进锦江</a></li>
+                <li id="menu2"><a href="联系我们.html">联系我们</a></li>
+                <li id="menu3"><a href="精品航线.html">精品航线</a></li>
+                <li id="menu4"><a href="航线地图.html">航线地图</a></li>
+                <li id="menu5"><a href="">操作流程</a></li>
+                <li id="menu6"><a href="方箱查询.html">支付方式</a></li>
+                <li id="menu7"><a href="保函下载.html">保函下载</a></li>
+                <li id="menu8"><a href="">代理名录</a></li>
+                <li id="menu9"><a href="集装箱规格.html">集装箱规格</a></li>
+                <li id="menu10"><a href="船舶资料.html">船舶资料</a></li>
+                <li id="menu11" class="last"><a href="附加费明细.html">附加费明细</a></li>
+            </ul>
+        </nav>
 
+    </aside>
+    <script type="text/javascript">
+        $("#menu1").addClass("on");
+    </script>
+    <div class="Content-column">
+        <article class="SinglePage">
+            <img src="uploadfiles/image/about1.jpg" />
+            <div style=" font-size:12px; line-height:24px; margin:28px 0 40px; text-indent:2em;">
+                上海锦江航运（集团）有限公司成立于1983年（以下简称“锦江航运”），是一家从事国际集装箱运输、国际航运物流和国际航运专业服务业务的综合航运产业集团公司，由上海市国有资产监督管理委员会直接监管。近年来，锦江航运通过成功实施品牌战略，实现经济效益和经营规模的稳步增长。公司多次获得“上海市著名商标”称号，先后荣获国家交通部海事局和上海海事局授予的“安全诚信公司”称号；公司、精品航线、船舶等先后荣获“上海市五一劳动奖状”。
+            </div>
+            <img src="uploadfiles/image/about2.jpg" />
+            <div style=" font-size:12px; line-height:24px; margin:28px 0 40px">
+                <p style="text-indent:2em;">在国际集装箱运输上，锦江航运拥有多条品牌航线，提供精确到小时的HDS（Hot Delivery Service）快速交货服务，同时在长江流域开辟了内支线物流服务。目前主要经营上海—日本、青岛—日本、上海—泰国、越南的国际班轮运输以及上海—台湾地区、华北—台湾地区的两岸间运输；拥有“锦江阪神穿梭快航”、“锦江四季快航”、“锦江东海穿梭快航”3条精品航线以及锦江青岛日本快航、锦江上海泰越航线、上海—台湾地区以及华北-台湾地区的准点快航。</p>
+                <p style="text-indent:2em;">锦江航运还相继在境内外拓展和完善市场营销体系，分别在香港、东京、大阪、太仓、南通武汉、青岛等地设立了境内外分支及代理机构。</p>
+                <p style="text-indent:2em;"> 在做精做强国际集装箱运输主业的基础上，锦江航运同步拓展国际船务代理、国际货运代理船员船舶管理，并开展部分船舶和集装箱租赁业务；延伸国际航运物流业务，建设综合物流基地和集装箱中转中心，初步构建“一主两翼”产业格局。</p>
+                <p style="text-indent:2em;">锦江航运秉承“做精做强，逐步做大”的发展思路，同步延伸海上航线布局和陆上物流业务积极投身上海国际航运中心的建设，力争发展成为亚洲著名航运服务商。
+                </p>
+                <br />
+                <br />
+                <br />
+            </div>
+        </article>
+    </div>
+    <div class="clear"></div>
 </section>
-<div class="clear"></div>
+
 <!--bottom-->
 <footer>
     <section class="Bottom">

@@ -8,9 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class MessageController {
+public class MessageController {//留言板 保存留言 ,暂时无法答复
 
-    @Reference
+    @Reference(check = false) //开始启动时不检测
     IMessageService messageService;
 
     /***
