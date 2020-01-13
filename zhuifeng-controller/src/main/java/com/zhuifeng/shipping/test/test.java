@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class test {
 
-    //跳转至首页
+  /*  //跳转至首页
     @GetMapping("index")
     public String index(){
         return "index";
-    }
+    }*/
     //跳转至航线
     @GetMapping("itinerary")
     public String itinerary(){
