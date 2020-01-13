@@ -63,8 +63,13 @@
        <url-pattern>/*</url-pattern>
    </filter-mapping>-->
 
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.html</url-pattern>
+  </servlet-mapping>
+
   <servlet>
-    <servlet-name>spring_Dispatcher</servlet-name>
+    <servlet-name>springmvc</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
@@ -77,7 +82,7 @@
 
 
   <servlet-mapping>
-    <servlet-name>spring_Dispatcher</servlet-name>
+    <servlet-name>springmvc</servlet-name>
     <url-pattern>/</url-pattern><!-- 根目录下所有的项目都要被spring_Dispatcher捕获 -->
   </servlet-mapping>
 
@@ -88,7 +93,7 @@
 
   <!-- 3、字符编码过滤器，一定要放在所有过滤器之前 -->
   <filter>
-    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-name>encodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
     <init-param>
       <param-name>encoding</param-name>
@@ -104,8 +109,16 @@
     </init-param>
   </filter>
   <filter-mapping>
-    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-name>encodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>*.html</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
   </filter-mapping>
 
 

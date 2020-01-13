@@ -10,4 +10,10 @@ public interface UserMapper {
      * @return
      */
     public UserPojo login(UserPojo userPojo);
+
+    /**
+     * 注册
+     * @param userPojo
+     */
+    public void UserRegister(UserPojo userPojo);
 }
