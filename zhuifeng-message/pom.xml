@@ -19,6 +19,12 @@
     </properties>
 
     <dependencies>
+        <!---->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+        <!--api接口文件-->
         <dependency>
             <groupId>com.zhuifeng.shipping</groupId>
             <artifactId>zhuifeng-api</artifactId>
