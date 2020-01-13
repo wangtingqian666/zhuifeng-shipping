@@ -19,11 +19,6 @@
     </properties>
 
     <dependencies>
-        <!---->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-freemarker</artifactId>
-        </dependency>
         <!--api接口文件-->
         <dependency>
             <groupId>com.zhuifeng.shipping</groupId>
@@ -34,11 +29,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <!--web-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!--sql数据库连接工具-->
         <dependency>

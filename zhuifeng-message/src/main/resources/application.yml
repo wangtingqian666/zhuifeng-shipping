@@ -7,12 +7,12 @@ dubbo:
     name: zhuifeng-message
   registry:
     address: zookeeper://127.0.0.1:2181
-
+  protocol:
+    name: dubbo
+    port: 20883
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: wtq123
     url: jdbc:mysql://127.0.0.1:3306/shipping
-  freemarker:
-    suffix: .ftl

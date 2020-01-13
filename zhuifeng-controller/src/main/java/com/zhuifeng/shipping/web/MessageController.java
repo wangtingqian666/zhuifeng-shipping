@@ -1,5 +1,6 @@
 package com.zhuifeng.shipping.web;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.zhuifeng.shipping.pojo.MessagePojo;
 import com.zhuifeng.shipping.service.IMessageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MessageController {
 
-    @Autowired
+    @Reference
     IMessageService messageService;
 
     /***
