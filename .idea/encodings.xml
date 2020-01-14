@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/zhuifeng-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhuifeng-cart" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhuifeng-controller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhuifeng-controller/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhuifeng-customers" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhuifeng-dependencies" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhuifeng-itinerary" charset="UTF-8" />
