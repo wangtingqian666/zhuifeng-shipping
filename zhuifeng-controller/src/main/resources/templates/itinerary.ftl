@@ -143,69 +143,18 @@
             </div>
             <div class="table2">
                 <table cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td class="td1">锦江运输</td>
-                        <td class="td2">上海</td>
-                        <td class="td3">横滨</td>
-                        <td class="td4">2015-05-20</td>
-                        <td class="td5">8 天</td>
-                        <td class="td6">USD</td>
-                        <td class="td7"><a href="">快速下单</a></td>
-                    </tr>
-                    <tr>
-                        <td class="td1">锦江运输</td>
-                        <td class="td2">上海</td>
-                        <td class="td3">横滨</td>
-                        <td class="td4">2015-05-20</td>
-                        <td class="td5">8 天</td>
-                        <td class="td6">USD</td>
-                        <td class="td7"><a href="">快速下单</a></td>
-                    </tr>
-                    <tr>
-                        <td class="td1">锦江运输</td>
-                        <td class="td2">上海</td>
-                        <td class="td3">横滨</td>
-                        <td class="td4">2015-05-20</td>
-                        <td class="td5">8 天</td>
-                        <td class="td6">USD</td>
-                        <td class="td7"><a href="">快速下单</a></td>
-                    </tr>
-                    <tr>
-                        <td class="td1">锦江运输</td>
-                        <td class="td2">上海</td>
-                        <td class="td3">横滨</td>
-                        <td class="td4">2015-05-20</td>
-                        <td class="td5">8 天</td>
-                        <td class="td6">USD</td>
-                        <td class="td7"><a href="">快速下单</a></td>
-                    </tr>
-                    <tr>
-                        <td class="td1">锦江运输</td>
-                        <td class="td2">上海</td>
-                        <td class="td3">横滨</td>
-                        <td class="td4">2015-05-20</td>
-                        <td class="td5">8 天</td>
-                        <td class="td6">USD</td>
-                        <td class="td7"><a href="">快速下单</a></td>
-                    </tr>
-                    <tr>
-                        <td class="td1">锦江运输</td>
-                        <td class="td2">上海</td>
-                        <td class="td3">横滨</td>
-                        <td class="td4">2015-05-20</td>
-                        <td class="td5">8 天</td>
-                        <td class="td6">USD</td>
-                        <td class="td7"><a href="">快速下单</a></td>
-                    </tr>
-                    <tr>
-                        <td class="td1">锦江运输</td>
-                        <td class="td2">上海</td>
-                        <td class="td3">横滨</td>
-                        <td class="td4">2015-05-20</td>
-                        <td class="td5">8 天</td>
-                        <td class="td6">USD</td>
-                        <td class="td7"><a href="">快速下单</a></td>
-                    </tr>
+                    <#list flights as flight>
+                        <tr>
+                            <td class="td1">${flight.fschedule}</td>
+                            <td class="td2">${flight.forigin}</td>
+                            <td class="td3">${flight.farrival}</td>
+                            <td class="td4">${flight.fstime?date}</td>
+                            <td class="td5">${flight.fvoyage}天</td>
+                            <td class="td6">${flight.fprice}</td>
+                            <td class="td7"><a href="">快速下单</a></td>
+                        </tr>
+                    </#list>
+
                 </table>
             </div>
         </section>
