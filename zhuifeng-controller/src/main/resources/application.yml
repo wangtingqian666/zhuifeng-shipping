@@ -3,7 +3,6 @@ server:
   servlet:
     context-path: /con
 dubbo:
-  #??????
   application:
     name: zhuifeng-controller
   registry:

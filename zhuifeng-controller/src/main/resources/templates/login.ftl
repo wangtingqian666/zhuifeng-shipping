@@ -16,6 +16,7 @@
     <script type="text/javascript">
         var navID = "0";
     </script>
+    <script type="text/javascript" src="js/longin.js"></script>
 </head>
 
 <body>
@@ -26,11 +27,11 @@
             <div class="language"><a href="" class="cn">中文版</a><em>|</em><a href="" class="en">ENGLISH</a></div>
             <div class="topright">
                 <ul>
-                    <li><a href="login.html">公共用户登录</a></li>
+                    <li><a href="login">公共用户登录</a></li>
                     <em>|</em>
-                    <li><a href="login.html">协议用户登录 </a></li>
+                    <li><a href="login">协议用户登录 </a></li>
                     <em>|</em>
-                    <li><a href="Register.html"> 注册</a></li>
+                    <li><a href="Register"> 注册</a></li>
                 </ul>
             </div>
         </section>
@@ -60,27 +61,27 @@
         <div class="leftbox">
             <div class="columnname">已注册的用户</div>
             <div class="table">
-                <form action="login" method="post">
+                <div id="msg"></div>
                     <table cellpadding="0" cellspacing="0" border="0">
+                        <form action="login" id="form">
                         <tr>
                             <td class="left"><span class="true"></span>用户名称：</td>
-                            <td><input type="username" name="uname"  class="text"><span class="num">请输入手机号码</span></td>
+                            <td><input type="username" id="uname" name="uname"  class="text"><span class="num"/>请输入手机号码</span></td>
                         </tr>
                         <tr>
                             <td class="left"><span class="true"></span>用户密码：</td>
-                            <td><input type="password" name="upass" class="text" ><span class="num">请输入6-16个字符</span></td>
+                            <td><input type="password" id="upass" name="upass" class="text" /><span class="num">请输入6-16个字符</span></td>
                         </tr>
                         <tr>
                             <td class="left"></td>
-                            <td><input type="submit" class="btn" value="登 录"></td>
+                            <td><input class="btn" value="登 录" type="button" id="login"></td>
                         </tr>
                         <tr>
                             <td class="left"></td>
                             <td><span class="true">*</span><span class="must">号内容为必填</span></td>
                         </tr>
-
+                        </form>
                     </table>
-                </form>
             </div>
         </div>
         <div class="rightbox">
