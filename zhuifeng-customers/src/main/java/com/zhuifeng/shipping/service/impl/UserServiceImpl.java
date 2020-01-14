@@ -4,7 +4,10 @@ import com.zhuifeng.shipping.mapper.UserMapper;
 import com.zhuifeng.shipping.pojo.UserPojo;
 import com.zhuifeng.shipping.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
+@com.alibaba.dubbo.config.annotation.Service
 public class UserServiceImpl implements IUserService {
 
     @Autowired
@@ -16,9 +19,9 @@ public class UserServiceImpl implements IUserService {
     }
 
     //注册
-
-    public void UserRegister(UserPojo userPojo) {
-        userMapper.UserRegister(userPojo);
+    @Override
+    public void userRegister(UserPojo userPojo) {
+        userMapper.userRegister(userPojo);
     }
 
 }

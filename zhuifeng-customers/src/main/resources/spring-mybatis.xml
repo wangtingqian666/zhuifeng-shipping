@@ -9,6 +9,8 @@
 		<property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
 		<!-- 指定数据源 -->
 		<property name="dataSource" ref="dataSource"></property>
+		<!-- 扫描entity包 使用别名 -->
+		<property name="typeAliasesPackage" value="com.zhuifeng.shipping.pojo"/>
 		<!-- 指定mapper的位置 -->
 		<property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"></property>
 	
@@ -18,7 +20,7 @@
 	<!-- 将所有mapper接口的实现类自动加入到ioc容器中 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.zhuifeng.shipping.mapper"></property>
-		
+
 	</bean>
 
 

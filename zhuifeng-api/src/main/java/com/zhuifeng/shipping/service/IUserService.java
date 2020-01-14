@@ -15,5 +15,5 @@ public interface IUserService {
      * 注册
      * @param userPojo
      */
-    public void UserRegister(UserPojo userPojo);
+    public void userRegister(UserPojo userPojo);
 }

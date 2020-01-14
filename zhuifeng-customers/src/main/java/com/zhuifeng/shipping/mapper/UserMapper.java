@@ -2,6 +2,7 @@ package com.zhuifeng.shipping.mapper;
 
 import com.zhuifeng.shipping.pojo.UserPojo;
 
+
 public interface UserMapper {
 
     /**
@@ -15,5 +16,5 @@ public interface UserMapper {
      * 注册
      * @param userPojo
      */
-    public void UserRegister(UserPojo userPojo);
+    public void userRegister(UserPojo userPojo);
 }

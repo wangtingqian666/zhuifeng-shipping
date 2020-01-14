@@ -12,6 +12,7 @@
   <name>zhuifeng-shipping Maven Webapp</name>
 
 
+
   <properties>
     <!-- 环境配置 -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -442,5 +443,19 @@
 
 
   </dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+        <filtering>false</filtering>
+      </resource>
+    </resources>
+
+  </build>
 
 </project>

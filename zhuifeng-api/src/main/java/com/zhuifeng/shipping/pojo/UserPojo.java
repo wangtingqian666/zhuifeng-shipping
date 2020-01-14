@@ -12,6 +12,7 @@ public class UserPojo implements Serializable {
     private  String uname;//名字
     private  String  upass;//密码
     private  String  repass;//确认密码
+    private  String  uaddress;//详细地址
     private  String  uphone;//移动电话
     private  String  uemail;//电子邮箱
     private  String  uwechar;// 微信
@@ -19,6 +20,14 @@ public class UserPojo implements Serializable {
     private  String  utelephone;//固定电话
     private  String  ucompany;//公司
     private  String  upostalcode;//邮政编码
+
+    public String getUaddress() {
+        return uaddress;
+    }
+
+    public void setUaddress(String uaddress) {
+        this.uaddress = uaddress;
+    }
 
     public String getRepass() {
         return repass;
