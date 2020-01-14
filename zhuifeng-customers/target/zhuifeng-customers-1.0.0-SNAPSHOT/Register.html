@@ -53,6 +53,46 @@
     //导航选中
     $("#nav" + navID).addClass("onnav");
 </script>
+<script type="text/javascript" language="javascript">
+
+  function valForm() {
+      var username=document.getElementById("username");
+      var password=document.getElementById("password");
+      var repassword=document.getElementById("repassword");
+      var uemail=document.getElementById("uemail");
+      var uphone=document.getElementById("uphone");
+      if(userName.value==""){
+          alert("用户名不能为空");
+          return false;
+      }else if(username.value.lenth<4||username.value.lenth>16){
+          alert("用户名长度不符合要求\n用户名长度为4-16个字符");
+          return false;
+      }else if(password.value!=repassword.value){
+          alert("两次密码不一致");
+          return false;
+      } else if(uemail.value.indexOf(".")<0||email.value.indexOf("@")<0) {
+          alert("邮箱名错误")
+          return false;
+      }else if(userName.value.lenth<4||userName.value.lenth>16) {
+          alert("手机号长度不符合\n例：02112345678“);
+          return false;
+
+      }else{
+          document.forms[0].action="login.html";
+          document.forms[0].submit();
+          return false;
+      }
+  }
+
+
+
+
+
+
+
+    </script>
+
+
 <!--top End-->
 <section class="Contain Register">
     <div class="Current">当前位置:<a href="index.html">首页</a> <em>|</em> <span class="column">注册</span></div>
@@ -63,39 +103,40 @@
                 <table cellpadding="0" cellspacing="0" border="0">
                     <tr>
                         <td class="left"><span class="true">*</span>用户名称：</td>
-                        <td><input type="text" class="text" name="uname"><span class="num">请输入1-20个字符</span></td>
+                        <td><input type="text" class="text" name="uname" id="username"><span class="num">请输入1-20个字符</span></td>
+
                     </tr>
                     <tr>
                         <td class="left"><span class="true">*</span>用户密码：</td>
-                        <td><input type="password" class="text" name="upass"><span class="num">请输入6-16个字符</span></td>
+                        <td><input type="password" class="text" name="upass" id="password"><span class="num">请输入6-16个字符</span></td>
                     </tr>
                     <tr>
                         <td class="left"><span class="true">*</span>验证密码：</td>
-                        <td><input type="password" class="text" name="repass"></td>
+                        <td><input type="password" class="text" name="repass" id="repassword"></td>
                     </tr>
                     <tr>
                         <td class="left"><span class="true">*</span>电子邮箱：</td>
-                        <td><input type="text" class="text" name="uemail"></td>
+                        <td><input type="text" class="text" name="uemail" id="uemail"></td>
                     </tr>
                     <tr>
                         <td class="left"><span class="true"></span>姓名/公司名：</td>
-                        <td><input type="text" class="text" name="ucompany"></td>
+                        <td><input type="text" class="text" name="ucompany" id="ucompany"></td>
                     </tr>
                     <tr>
                         <td class="left"><span class="true"></span>详细地址：</td>
-                        <td><input type="text" class="text" name="uaddress"></td>
+                        <td><input type="text" class="text" name="uaddress" ></td>
                     </tr>
                     <tr>
                         <td class="left"><span class="true"></span>邮政编码：</td>
-                        <td><input type="text" class="text" name="upostalcode"><span class="num">例：200000</span></td>
+                        <td><input type="text" class="text" name="upostalcode" id="upostalcode"><span class="num">例：200000</span></td>
                     </tr>
                     <tr>
                         <td class="left"><span class="true"></span>固定电话：</td>
-                        <td><input type="text" class="text" name="utelephone"><span class="num">例：02112345678(上海电话)</span></td>
+                        <td><input type="text" class="text" name="utelephone" id="utelephone"><span class="num">例：02112345678(上海电话)</span></td>
                     </tr>
                     <tr>
                         <td class="left"><span class="true"></span>手机：</td>
-                        <td><input type="text" class="text" name="uphone"><span class="num">例：13800000000</span></td>
+                        <td><input type="text" class="text" name="uphone" id="uphone"><span class="num">例：13800000000</span></td>
                     </tr>
                     <tr>
                         <td class="left"></td>
@@ -103,7 +144,7 @@
                     </tr>
                     <tr>
                         <td class="left"></td>
-                        <td><input type="submit" class="btn" value="提 交"><input type="button" class="btn btn2" value="取 消"></td>
+                        <td><input  class="btn" onclick="return valForm()" value="提 交"><input type="button" class="btn btn2" value="取 消"></td>
                     </tr>
                     <tr>
                         <td class="left"></td>

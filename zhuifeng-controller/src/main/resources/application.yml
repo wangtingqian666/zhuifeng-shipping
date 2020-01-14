@@ -3,7 +3,7 @@ server:
   servlet:
     context-path: /con
 dubbo:
-  #Ïû·ÑÕß
+  #??????
   application:
     name: zhuifeng-controller
   registry:
@@ -11,3 +11,8 @@ dubbo:
 spring:
   freemarker:
     suffix: .ftl
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.zhuifeng.shipping.pojo
+  base-package: com.zhuifeng.shipping.web

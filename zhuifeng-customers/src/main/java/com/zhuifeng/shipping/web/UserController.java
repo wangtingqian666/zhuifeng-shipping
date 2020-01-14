@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 
@@ -15,18 +16,13 @@ public class UserController {
     @Autowired
     IUserService userService;
 
-    /**
-     * 登录
-     * @param userPojo
-     * @param session
-     * @param model
-     * @return
-     */
+
     @RequestMapping("login")
-    private  String  login(UserPojo userPojo, HttpSession session, Model model){
+    @ResponseBody
+    private String login(UserPojo userPojo, HttpSession session, Model model){
         UserPojo user = userService.login(userPojo);
         if (null == user ){
-            model.addAttribute("message","账号或者密码不对");
+            model.addAttribute("error","账号或者密码不对");
             return "login.html";
         }
         session.setAttribute("user",user);
