@@ -26,11 +26,11 @@
             <div class="language"><a href="" class="cn">中文版</a><em>|</em><a href="" class="en">ENGLISH</a></div>
             <div class="topright">
                 <ul>
-                    <li><a href="log">公共用户登录</a></li>
+                    <li><a href="jumplogin">公共用户登录</a></li>
                     <em>|</em>
-                    <li><a href="log">协议用户登录 </a></li>
+                    <li><a href="jumplogin">协议用户登录 </a></li>
                     <em>|</em>
-                    <li><a href="register"> 注册</a></li>
+                    <li><a href="jumpregister"> 注册</a></li>
                 </ul>
             </div>
         </section>

@@ -10,8 +10,3 @@ dubbo:
 spring:
   freemarker:
     suffix: .ftl
-
-mybatis:
-  mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.zhuifeng.shipping.pojo
-  base-package: com.zhuifeng.shipping.web

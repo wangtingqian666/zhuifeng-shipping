@@ -16,6 +16,7 @@
     <script type="text/javascript">
         var navID = "0";
     </script>
+    <script type="text/javascript" src="js/register.js"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
                     <em>|</em>
                     <li><a href="login.html">协议用户登录 </a></li>
                     <em>|</em>
-                    <li><a href="Register.Register.fml"> 注册</a></li>
+                    <li><a href=""> 注册</a></li>
                 </ul>
             </div>
         </section>
@@ -53,66 +54,26 @@
     //导航选中
     $("#nav" + navID).addClass("onnav");
 </script>
-<script type="text/javascript" language="javascript">
-
-    function valForm() {
-        var username=document.getElementById("username");
-        var password=document.getElementById("password");
-        var repassword=document.getElementById("repassword");
-        var uemail=document.getElementById("uemail");
-        var uphone=document.getElementById("uphone");
-        if(userName.value==""){
-            alert("用户名不能为空");
-            return false;
-        }else if(username.value.lenth<4||username.value.lenth>16){
-            alert("用户名长度不符合要求\n用户名长度为4-16个字符");
-            return false;
-        }else if(password.value!=repassword.value){
-            alert("两次密码不一致");
-            return false;
-        } else if(uemail.value.indexOf(".")<0||email.value.indexOf("@")<0) {
-            alert("邮箱名错误")
-            return false;
-        }else if(userName.value.lenth<4||userName.value.lenth>16) {
-            alert("手机号长度不符合\n例：02112345678“);
-            return false;
-
-        }else{
-            document.forms[0].action="login.html";
-            document.forms[0].submit();
-            return false;
-        }
-    }
-
-
-
-
-
-
-
-</script>
-
-
 <!--top End-->
 <section class="Contain Register">
     <div class="Current">当前位置:<a href="index.html">首页</a> <em>|</em> <span class="column">注册</span></div>
     <div class="Registerbox">
         <div class="columnname">会员注册</div>
         <div class="content">
-            <form action="register" method="post">
+            <form action="register" method="post" id="form">
                 <table cellpadding="0" cellspacing="0" border="0">
                     <tr>
                         <td class="left"><span class="true">*</span>用户名称：</td>
-                        <td><input type="text" class="text" name="uname" id="username"><span class="num">请输入1-20个字符</span></td>
+                        <td><input type="text" class="text" name="uname" id="uname"><span class="num">请输入1-20个字符</span></td>
 
                     </tr>
                     <tr>
                         <td class="left"><span class="true">*</span>用户密码：</td>
-                        <td><input type="password" class="text" name="upass" id="password"><span class="num">请输入6-16个字符</span></td>
+                        <td><input type="password" class="text" name="upass" id="upass"><span class="num">请输入6-16个字符</span></td>
                     </tr>
                     <tr>
                         <td class="left"><span class="true">*</span>验证密码：</td>
-                        <td><input type="password" class="text" name="repass" id="repassword"></td>
+                        <td><input type="password" class="text" name="repass" id="repass"></td>
                     </tr>
                     <tr>
                         <td class="left"><span class="true">*</span>电子邮箱：</td>
@@ -140,11 +101,11 @@
                     </tr>
                     <tr>
                         <td class="left"></td>
-                        <td><input type="checkbox" class="checkbox"	><em class="radio">我已阅读相关退款声明，并愿意遵守该声明中的有关事项</em><a href="" class="edit">查看条款</a>  </td>
+                        <td><input type="checkbox" class="checkbox" id="checkbox"	><em class="radio">我已阅读相关退款声明，并愿意遵守该声明中的有关事项</em><a href="" class="edit">查看条款</a>  </td>
                     </tr>
                     <tr>
                         <td class="left"></td>
-                        <td><button class="btn"><a href="#" class="btn" onclick="return valForm()" >注册</a></button><input type="button" class="btn btn2" value="取 消"></td>
+                        <td><button class="btn" id="register" type="button">注册</button><input type="button" class="btn btn2" value="取 消"></td>
                     </tr>
                     <tr>
                         <td class="left"></td>

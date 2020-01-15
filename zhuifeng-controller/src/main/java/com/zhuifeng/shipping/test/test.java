@@ -26,9 +26,9 @@ public class test {
     public String querysub(){
         return "querysub";
     }
-    //跳转至登陆页
+  /*  //跳转至登陆页
     @GetMapping("log")
    public String login(){
         return "login";
-   }
+   }*/
 }
