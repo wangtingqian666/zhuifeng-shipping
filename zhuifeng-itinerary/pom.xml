@@ -19,12 +19,17 @@
     </properties>
 
     <dependencies>
-       <!-- tkmybatis
+      <!--tkmybatis-->
         <dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-spring-boot-starter</artifactId>
             <version>2.1.5</version>
-        </dependency>-->
+        </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper</artifactId>
+            <version>4.1.5</version>
+        </dependency>
         <!--mysql数据库-->
         <dependency>
             <groupId>mysql</groupId>
@@ -32,11 +37,11 @@
             <version>5.1.47</version>
             <scope>runtime</scope>
         </dependency>
-        <!--jpa-->
+      <!--  &lt;!&ndash;jpa&ndash;&gt;
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+        </dependency>-->
         <!--api接口-->
         <dependency>
             <groupId>com.zhuifeng.shipping</groupId>

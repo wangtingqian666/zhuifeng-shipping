@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class UserController {
 
-    @Reference
+    @Reference(check = false)
     IUserService userService;
 
     /***

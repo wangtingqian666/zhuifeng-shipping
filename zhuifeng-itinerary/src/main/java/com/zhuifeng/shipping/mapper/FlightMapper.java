@@ -1,12 +1,12 @@
 package com.zhuifeng.shipping.mapper;
 
 import com.zhuifeng.shipping.pojo.FlightPojo;
-import org.springframework.data.jpa.repository.JpaRepository;
+import tk.mybatis.mapper.common.Mapper;
 
 import java.util.Date;
 import java.util.List;
 
-public interface FlightMapper extends JpaRepository<FlightPojo,Integer> {
+public interface FlightMapper extends Mapper<FlightPojo> {
     //查询未启航的船
     public List<FlightPojo> findFlightPojoByFstatus(int fstatus);
     //根据起始地条件查询航班

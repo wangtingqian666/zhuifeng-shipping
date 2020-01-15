@@ -15,6 +15,36 @@ public class FlightServiceImpl implements IFlightService {
     FlightMapper flightMapper;
 
     @Override
+    public List<FlightPojo> clickFschedule(String fschedule, int fstatus) {
+        return null;
+    }
+
+    @Override
+    public List<FlightPojo> queryFid() {
+        return null;
+    }
+
+    @Override
+    public List<FlightPojo> queryFschedule(String fschedule) {
+        return null;
+    }
+
+    @Override
+    public List<FlightPojo> queryForigin(String forigin) {
+        return null;
+    }
+
+    @Override
+    public List<FlightPojo> queryFarrival(String farrival) {
+        return null;
+    }
+
+    @Override
+    public List<FlightPojo> queryFstime(String fstime) {
+        return null;
+    }
+
+    @Override
     public List<FlightPojo> queryFlight(int fstatus) {
         return flightMapper.findFlightPojoByFstatus(fstatus);
     }

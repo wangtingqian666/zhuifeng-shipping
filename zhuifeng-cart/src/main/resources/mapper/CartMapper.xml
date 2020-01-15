@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhuifeng.shipping.mapper.CartMapper">
+    <resultMap id="detailMapper" type="com.zhuifeng.shipping.pojo.OrderDetailPojo">
+        <id property="odid" column="odid"/>
+        <result column="odnumber" property="odnumber"/>
+        <result column="odshipname" property="odshipname"/>
+        <result column="odcanum" property="odcanum"/>
+        <result column="odbox" property="odbox"/>
+        <result column="odsize" property="odsize"/>
+        <result column="odempty" property="odempty"/>
+        <result column="oddynamic" property="oddynamic"/>
+        <result column="oddytime" property="oddytime"/>
+        <result column="odremark" property="odremark"/>
+        <association property="flightPojo" javaType="com.zhuifeng.shipping.pojo.FlightPojo">
+            <id column="fid" property="fid"/>
+            <result column="fschedule" property="fschedule"/>
+            <result column="forigin" property="forigin"/>
+            <result column="farrival" property="farrival"/>
+            <result column="fstime" property="fstime"/>
+            <result column="fvoyage" property="fvoyage"/>
+            <result column="fprice" property="fprice"/>
+            <result column="fstatus" property="fstatus"/>
+        </association>
+    </resultMap>
+
+    <select id="querydetail" resultMap="detailMapper">
+       SELECT od.odid,od.odnumber,od.odshipname,od.odcanum,od.odbox,od.odsize,od.odempty,od.oddynamic,od.oddytime,od.odremark
+    ,f.fid,f.forigin,f.farrival FROM s_order o LEFT JOIN s_order_detail od ON o.oid=od.oid_id LEFT JOIN
+s_flight f ON od.flight_id=f.fid WHERE o.user_id=#{xxx}
+    </select>
+</mapper>
