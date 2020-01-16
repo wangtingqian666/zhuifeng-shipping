@@ -15,8 +15,8 @@ public class CartServiceImpl implements ICartService {
     CartMapper cartMapper;
 
     @Override
-    public List<OrderDetailPojo> querydetail(int uid) {
+    public List<OrderDetailPojo> querydetail(OrderDetailPojo orderDetailPojo) {
 
-        return  cartMapper.querydetail(uid);
+        return  cartMapper.querydetail(orderDetailPojo);
     }
 }

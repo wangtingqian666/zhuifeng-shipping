@@ -8,5 +8,5 @@ public interface ICartService {
     /***
      * 根据用户id查询详细信息
      */
-    public List<OrderDetailPojo> querydetail(int uid);
+    public List<OrderDetailPojo> querydetail(OrderDetailPojo orderDetailPojo);
 }

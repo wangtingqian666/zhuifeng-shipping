@@ -76,21 +76,26 @@
     </script>
     <div class="Content-column">
         <div class="Cargo">
+            <form action="querysub" method="post">
             <div class="select">
                 <div class="num">
                     <div class="tit">提单号  </div>
-                    <input type="text" class="text" />
+                    <input type="text" id="oid" name="oid" class="text" />
                 </div>
                 <div class="num">
                     <div class="tit">箱号  </div>
-                    <input type="text" class="text" />
+                    <input type="text" id="odcanum" class="text" name="odcanum" />
                 </div>
                 <div class="clear"></div>
                 <div class="search">
-                    <a href="" class="btn">查 询</a>
+                    <input type="submit" class="btn">查询
+<#--                    <input type="button" onclick="reset()" class="btn reset-btn">重置-->
+<#--                    <a href="" class="btn" >查 询</a>-->
                     <a href="" class="btn reset-btn">重 置</a>
+
                 </div>
             </div>
+            </form>
             <div class="clear"></div>
             <div class="result">
                 <div class="tit">查询结果</div>
@@ -113,7 +118,7 @@
                             <td class="td14">动态发送地</td>
                             <td class="td15">备注</td>
                         </tr>
-                        <#list details as detail>
+                        <#list pageInfo.list as detail>
                             <tr>
                                 <td class="td1">${detail.odnumber}</td>
                                 <td class="td2">${detail.flightPojo.fname}</td>
@@ -132,13 +137,24 @@
                                 <td class="td15">${detail.odremark}</td>
                             </tr>
                         </#list>
-
-
                     </table>
+
+                    <form action="querysub" method="post">
+                        <input hidden="hidden" name="oid" value="${(detailPojo.oid)!''}" >
+                        <input hidden="hidden" name="pageNum" value="${(detailPojo.pageNum)!''}">
+                        <input hidden="hidden" name="odcanum" value="${(detailPojo.odcanum)!''}">
+                        <a href="javascript:void(0)" onclick="jumpList(1)">首页</a>
+                        <#list pageInfo.navigatepageNums as pg>
+                            <a href="javascript:void(0)" onclick="jumpList('${pg}')">${pg}</a>
+                        </#list>
+                        <a href="javascript:void(0)" onclick="jumpList('${pageInfo.pages}')">尾页</a>
+                    </form>
+
                 </div>
             </div>
         </div>
     </div>
+
     <div class="clear"></div>
 </section>
 
@@ -196,6 +212,10 @@
 <script type="text/javascript">
     //整站无图处理
     jQuery.each(jQuery("img"), function (i, n) { jQuery(n).error(function () { n.src = 'uploadfiles/nopic.jpg'; }); n.src = n.src; });
+    function jumpList(pg) {
+            $("input[name='pageNum']").val(pg);
+            $("form").submit();
+        }
 </script>
 <!--bottom End-->
 </body>

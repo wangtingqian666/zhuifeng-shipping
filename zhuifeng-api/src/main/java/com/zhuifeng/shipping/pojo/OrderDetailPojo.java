@@ -19,11 +19,19 @@ public class OrderDetailPojo implements Serializable {//订单详细表
     private Date oddytime;//箱子动态时间
     private String odremark;//备注
     private FlightPojo flightPojo;//和船关系 多对一
+    private OrderPojo orderPojo;
     private String oid;//提单号 订单外键
 
-    private int pageNum;//当前页
-    private int pageSize;//偏移量
+    private int pageNum=1;//当前页
+    private int pageSize=3;//偏移量
 
+    public OrderPojo getOrderPojo() {
+        return orderPojo;
+    }
+
+    public void setOrderPojo(OrderPojo orderPojo) {
+        this.orderPojo = orderPojo;
+    }
 
     public int getPageNum() {
         return pageNum;

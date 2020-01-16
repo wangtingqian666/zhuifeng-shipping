@@ -25,10 +25,16 @@
             <result column="fstatus" property="fstatus"/>
         </association>
     </resultMap>
-
+<!--根据条件查询-->
     <select id="querydetail" resultMap="detailMapper">
        SELECT od.odid,od.oid,f.fname,od.odnumber,od.odshipname,od.odcanum,od.odbox,od.odsize,od.odempty,od.oddynamic,od.oddytime,od.odremark
     ,f.fid,f.forigin,f.farrival,f.fschedule FROM s_order o LEFT JOIN s_order_detail od ON o.oid=od.oid LEFT JOIN
-s_flight f ON od.flight_id=f.fid WHERE o.user_id=#{xxx}
+s_flight f ON od.flight_id=f.fid where  o.user_id=#{orderPojo.user_id}
+            <if test="null!=oid and ''!=oid">
+                and od.oid = #{oid}
+            </if>
+            <if test="null!=odcanum and ''!=odcanum">
+                and od.odcanum = #{odcanum}
+            </if>
     </select>
 </mapper>
