@@ -22,10 +22,10 @@ public class test {
         return "helpin";
     }
     //跳转至信息订阅与查询
-    @GetMapping("querysub")
+  /*  @GetMapping("querysub")
     public String querysub(){
         return "querysub";
-    }
+    }*/
   /*  //跳转至登陆页
     @GetMapping("log")
    public String login(){

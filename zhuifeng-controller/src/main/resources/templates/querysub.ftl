@@ -113,23 +113,26 @@
                             <td class="td14">动态发送地</td>
                             <td class="td15">备注</td>
                         </tr>
-                        <tr>
-                            <td class="td1"></td>
-                            <td class="td2">  </td>
-                            <td class="td3"></td>
-                            <td class="td4">   </td>
-                            <td class="td5"> </td>
-                            <td class="td6">  </td>
-                            <td class="td7"></td>
-                            <td class="td8"></td>
-                            <td class="td9"></td>
-                            <td class="td10"> </td>
-                            <td class="td11"></td>
-                            <td class="td12"> </td>
-                            <td class="td13"> </td>
-                            <td class="td14"></td>
-                            <td class="td15"></td>
-                        </tr>
+                        <#list details as detail>
+                            <tr>
+                                <td class="td1">${detail.odnumber}</td>
+                                <td class="td2">${detail.flightPojo.fname}</td>
+                                <td class="td3">${detail.flightPojo.fschedule}</td>
+                                <td class="td4">${detail.oid}</td>
+                                <td class="td5">${detail.flightPojo.forigin}</td>
+                                <td class="td6">${detail.flightPojo.farrival}</td>
+                                <td class="td7">${detail.odcanum}</td>
+                                <td class="td8">${detail.odbox}</td>
+                                <td class="td9">${detail.odsize}</td>
+                                <td class="td10">${detail.odempty}</td>
+                                <td class="td11">${detail.oddynamic}</td>
+                                <td class="td12">${detail.oddytime?date}</td>
+                                <td class="td13">${detail.flightPojo.forigin}</td>
+                                <td class="td14">${detail.flightPojo.farrival}</td>
+                                <td class="td15">${detail.odremark}</td>
+                            </tr>
+                        </#list>
+
 
                     </table>
                 </div>

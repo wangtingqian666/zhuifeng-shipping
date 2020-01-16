@@ -11,12 +11,21 @@ public class FlightPojo implements Serializable {//航班表
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int fid;//主键 自增
     private String fschedule;//班期
+    private String fname;//船名
     private String forigin;//起始地点
     private String farrival;//到达地点
     private Date fstime;//始发时间
     private int fvoyage;//中间航行时间
     private double fprice;//运价
     private int fstatus;//状态
+
+    public String getFname() {
+        return fname;
+    }
+
+    public void setFname(String fname) {
+        this.fname = fname;
+    }
 
     public int getFid() {
         return fid;
