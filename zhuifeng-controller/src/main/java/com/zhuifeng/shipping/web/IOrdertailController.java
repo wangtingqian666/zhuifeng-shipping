@@ -29,15 +29,11 @@ public class IOrdertailController {
         if (null==user){//若用户没有登陆 跳转到登陆页
             return "login";
         }
-        //分页
-        PageHelper.startPage(detailPojo.getPageNum(),detailPojo.getPageSize());
         OrderPojo orderPojo =new OrderPojo();
         orderPojo.setUser_id(user.getUid());
         detailPojo.setOrderPojo(orderPojo);
         //获取到信息
-        List<OrderDetailPojo> list= cartService.querydetail(detailPojo);
-       //不能执行
-        PageInfo<OrderDetailPojo> pageInfo=new PageInfo<>(list);
+        PageInfo<OrderDetailPojo> pageInfo= cartService.querydetail(detailPojo);
         model.addAttribute("detailPojo",detailPojo);
         model.addAttribute("pageInfo",pageInfo);
         return "querysub";

@@ -80,11 +80,11 @@
             <div class="select">
                 <div class="num">
                     <div class="tit">提单号  </div>
-                    <input type="text" id="oid" name="oid" class="text" />
+                    <input type="text" id="oid" name="oid" class="text" value="${(detailPojo.oid)!''}" />
                 </div>
                 <div class="num">
                     <div class="tit">箱号  </div>
-                    <input type="text" id="odcanum" class="text" name="odcanum" />
+                    <input type="text" id="odcanum" class="text" name="odcanum" value="${(detailPojo.odcanum)!''}" />
                 </div>
                 <div class="clear"></div>
                 <div class="search">

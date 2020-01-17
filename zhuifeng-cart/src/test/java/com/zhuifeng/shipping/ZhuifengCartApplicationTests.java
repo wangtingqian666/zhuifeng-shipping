@@ -33,7 +33,7 @@ class ZhuifengCartApplicationTests {
         orderPojo.setUser_id(1);
         OrderDetailPojo orderDetailPojo=new OrderDetailPojo();
         orderDetailPojo.setOrderPojo(orderPojo);
-        List<OrderDetailPojo> querydetail = cartService.querydetail(orderDetailPojo);
-        System.out.println(querydetail);
+//        List<OrderDetailPojo> querydetail = cartService.querydetail(orderDetailPojo);
+//        System.out.println(querydetail);
     }
 }
