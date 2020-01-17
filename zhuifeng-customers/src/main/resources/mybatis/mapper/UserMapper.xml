@@ -14,4 +14,14 @@
         insert  into s_user(uname,upass,uemail,ucompany,uaddress,upostalcode,utelephone,uphone)
         values  (#{uname},#{upass},#{uemail},#{ucompany},#{uaddress},#{upostalcode},#{utelephone},#{uphone})
     </insert>
+    <!--保存收货地址-->
+    <insert id="insertAddByuid">
+        insert into s_address (aconsigner,aceradd,aconsignee,aceeadd,anotifier,aneradd,user_id) values
+         (#{aconsigner},#{aceradd},#{aconsignee},#{aceeadd},#{anotifier},#{aneradd},#{user_id})
+    </insert>
+    <!--根据用户id查询收货地址-->
+    <select id="queryaddress" resultType="addressPojo">
+        select aconsigner,aceradd,aconsignee,aceeadd,
+         anotifier,aneradd from s_address where user_id=#{uid}
+    </select>
 </mapper>
