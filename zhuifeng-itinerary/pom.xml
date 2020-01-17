@@ -8,6 +8,7 @@
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../zhuifeng-dependencies/pom.xml</relativePath>
     </parent>
+    <packaging>jar</packaging>
     <groupId>com.zhuifeng.shipping</groupId>
     <artifactId>zhuifeng-itinerary</artifactId>
     <version>1.0.0-SNAPSHOT</version>
