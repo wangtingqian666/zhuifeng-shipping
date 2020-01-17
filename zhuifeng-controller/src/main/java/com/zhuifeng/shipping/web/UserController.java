@@ -7,6 +7,7 @@ import com.zhuifeng.shipping.utils.StringNull;
 import com.zhuifeng.shipping.utils.UserResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
@@ -78,5 +79,14 @@ public class UserController {
         }
         userService.userRegister(userPojo);
         return "login";
+    }
+
+    /***
+     *根据用户id查询详细地址
+     * @return
+     */
+    @GetMapping("queryadd")
+    public String query(){
+        return "";
     }
 }
