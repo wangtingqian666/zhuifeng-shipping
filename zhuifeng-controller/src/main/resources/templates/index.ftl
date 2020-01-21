@@ -46,7 +46,7 @@
                 <li id="nav5"><a class="navA" href="helpin"> 帮助中心</a></li>
             </ul>
         </nav>
-        <div class="center"><a href="" class="center1">结算中心</a><a href="membercenter.html" class="center2">会员中心</a> </div>
+        <div class="center"><a href="" class="center1">结算中心</a><a href="jumpuserinfo" class="center2">会员中心</a> </div>
     </section>
 </header>
 <script type="text/javascript">

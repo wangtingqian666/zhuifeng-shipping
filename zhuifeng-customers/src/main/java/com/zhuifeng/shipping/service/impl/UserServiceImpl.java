@@ -36,4 +36,9 @@ public class UserServiceImpl implements IUserService {
     public List<AddressPojo> queryaddress(int uid) {
         return userMapper.queryaddress(uid);
     }
+
+    @Override
+    public UserPojo selectUserByuid(int uid) {
+        return userMapper.selectUserByuid(uid);
+    }
 }

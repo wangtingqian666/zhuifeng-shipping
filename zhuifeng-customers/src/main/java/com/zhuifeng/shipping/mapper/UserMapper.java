@@ -21,6 +21,13 @@ public interface UserMapper {
      */
     public void userRegister(UserPojo userPojo);
 
+    /***
+     * 根据用户id查询用户详情
+     * @param uid
+     * @return
+     */
+    public UserPojo selectUserByuid(int uid);
+
     /**
      * 根据用户id保存收货地址
      * @param addressPojo

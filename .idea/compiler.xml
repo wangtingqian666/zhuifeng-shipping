@@ -21,6 +21,7 @@
       <module name="zhuifeng-api" options="-parameters" />
       <module name="zhuifeng-cart" options="-parameters" />
       <module name="zhuifeng-controller" options="-parameters" />
+      <module name="zhuifeng-customers" options="-parameters" />
       <module name="zhuifeng-itinerary" options="-parameters" />
       <module name="zhuifeng-message" options="-parameters" />
       <module name="zhuifeng-status" options="-parameters" />

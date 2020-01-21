@@ -1,6 +1,7 @@
 package com.zhuifeng.shipping.web;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.zhuifeng.shipping.pojo.AddressPojo;
 import com.zhuifeng.shipping.pojo.UserPojo;
 import com.zhuifeng.shipping.service.IUserService;
 import com.zhuifeng.shipping.utils.StringNull;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class UserController {
@@ -82,11 +84,43 @@ public class UserController {
     }
 
     /***
-     *根据用户id查询详细地址
+     * 当用户点击会员中心的时候进去查询
+     * 根据用户id查询 用户个人信息
      * @return
      */
-    @GetMapping("queryadd")
-    public String query(){
-        return "";
+    @RequestMapping("jumpuserinfo")
+    public String userinfo(HttpSession session,Model model){
+        UserPojo user = (UserPojo) session.getAttribute("user");
+        if (null==user){//判断用户是否已经登陆
+            return "login";
+        }
+
+        UserPojo userPojo = userService.selectUserByuid(user.getUid());
+        model.addAttribute("userpojo",userPojo);
+        return  "userinfo";
+    }
+
+
+    /***
+     *根据用户id查询收货地址
+     * @return
+     */
+    @GetMapping("receipt")
+    public String query(HttpSession session,Model model){
+        UserPojo user = (UserPojo) session.getAttribute("user");
+        List<AddressPojo> address =userService.queryaddress(user.getUid());
+        return "receipt";
+    }
+
+    /****
+     * 根据用户id插入收货地址
+     * @param addressPojo
+     *
+     * @return
+     */
+    @RequestMapping("insertadd")
+    public String insertAdd(AddressPojo addressPojo){
+        boolean flg = userService.insertAddByuid(addressPojo);
+        return "forward:receipt";
     }
 }
