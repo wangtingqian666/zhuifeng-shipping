@@ -94,6 +94,7 @@ public class UserController {
         if (null==user){//判断用户是否已经登陆
             return "login";
         }
+
         UserPojo userPojo = userService.selectUserByuid(user.getUid());
         model.addAttribute("userpojo",userPojo);
         return  "userinfo";
